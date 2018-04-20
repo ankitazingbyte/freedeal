@@ -1,32 +1,33 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+  <h1>Deals</h1>
 
-<h1>Deals</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @deals.each do |deal| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= image_tag deal.image.url %></td>
-        <td><%= deal.title %></td>
-        <td><%= deal.description %></td>
-        <td><%= deal.url_link %></td>
-        <td><%= link_to 'Show', deal %></td>
-        <td><%= link_to 'Edit', edit_deal_path(deal) %></td>
-        <td><%= link_to 'Destroy', deal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Image</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @deals.each do |deal| %>
+        <tr>
+          <td><%= image_tag deal.image.url %></td>
+          <td><%= deal.title %></td>
+          <td><%= deal.description %></td>
+          <td><%= deal.url_link %></td>
+          <td><%= link_to 'Show', deal %></td>
+          <td><%= link_to 'Edit', edit_deal_path(deal) %></td>
+          <td><%= link_to 'Destroy', deal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Deal', new_deal_path %>
+  <br>
+
+  <%= link_to 'New Deal', new_deal_path %>
+</div>

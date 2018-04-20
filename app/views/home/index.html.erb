@@ -48,9 +48,9 @@
           <div class="thumbnail"> 
             <%= image_tag deal.image.url, width: "140", height: "140" %>
             <div class="caption">
-              <h2><a href="/deals/<%= deal.id %>"><%= deal.title %></a></h2> 
+              <h2><a href="/deals/<%= deal.id %>" class= "deal_link"><%= deal.title %></a></h2> 
               <p><%= deal.description %></p> 
-              <p><%= link_to deal.url_link, class: "btn btn-primary boton deal_link" do %>Go To Deal Page <i class="fa fa-angle-double-right"></i><% end %></p>
+              <p><%= link_to deal.url_link, class: "btn btn-primary boton" do %>Go To Deal Page <i class="fa fa-angle-double-right"></i><% end %></p>
             </div>
           </div>
         </div> 
