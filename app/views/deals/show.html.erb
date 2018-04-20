@@ -1,22 +1,23 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+	<p>
+	  <strong>Image:</strong>
+	  <%= image_tag @deal.image.url %>
+	</p>
 
-<p>
-  <strong>Image:</strong>
-  <%= image_tag @deal.image.url %>
-</p>
+	<p>
+	  <strong>Title:</strong>
+	  <%= @deal.title %>
+	</p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @deal.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @deal.description %>
-</p>
-<p>
-  <strong>url:</strong>
-  <%= @deal.url_link %>
-</p>
-<%= link_to 'Edit', edit_deal_path(@deal) %> |
-<%= link_to 'Back', deals_path %>
+	<p>
+	  <strong>Description:</strong>
+	  <%= @deal.description %>
+	</p>
+	<p>
+	  <strong>url:</strong>
+	  <%= @deal.url_link %>
+	</p>
+	<%= link_to 'Edit', edit_deal_path(@deal) %> |
+	<%= link_to 'Back', deals_path %>
+</div>

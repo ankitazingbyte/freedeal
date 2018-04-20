@@ -41,23 +41,22 @@
   </div>
   <!-- carousel end -->
   <br>
-  <div class="container">
+ 
     <div class="column">  
       <% @deals.each do |deal| %>
         <div class="col-sm-4">
           <div class="thumbnail"> 
             <%= image_tag deal.image.url, width: "140", height: "140" %>
             <div class="caption">
-              <h2><%= deal.title %></h2> 
+              <h2><a href="/deals/<%= deal.id %>"><%= deal.title %></a></h2> 
               <p><%= deal.description %></p> 
-              <p><%= link_to deal.url_link, class: "btn btn-primary boton" do %>Go To Deal Page <i class="fa fa-angle-double-right"></i><% end %></p>
+              <p><%= link_to deal.url_link, class: "btn btn-primary boton deal_link" do %>Go To Deal Page <i class="fa fa-angle-double-right"></i><% end %></p>
             </div>
           </div>
         </div> 
       <% end %>
     </div>  <!-- /.row -->
-  </div> <!-- /.container -->
-
+   <!-- /.container -->
     <!-- <div class = "row">
       <%# @deals.each do |deal| %>
         <div class = "col-sm-4 ">
@@ -74,7 +73,7 @@
     </div> -->
 <div class="digg_pagination">
 <center>
-    <%= will_paginate @deals, :container => false %>
+    <%= will_paginate @deals, :page_links => false %>
 </center>
 </div>
 </div>
