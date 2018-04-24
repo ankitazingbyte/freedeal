@@ -1,79 +1,66 @@
-<div class="container">
-<!-- Carousel -->
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <%= image_tag "image1.jpg", width: "100%" %>
-        <div class="container">
-          <div class="carousel-caption">
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <%= image_tag "image4.jpeg", width:"100%", height: "100%" %>
-        <div class="container">
-          <div class="carousel-caption">
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <%= image_tag "image8.jpeg", width:"1100px", height: "200px" %>
-        <div class="container">
-          <div class="carousel-caption">
+<body id="bd" class="bd fs3 com_k2">
+  <div id="ja-container" class="wrap ja-mf">
+    <div class="main">
+      <div class="main-inner1 clearfix">
+        <div id="ja-mainbody" style="width:100%">
+          <div class="inner clearfix">
+            <div id="ja-content" class="column" style="width:64%">
+              <div class="itemList">
+                <% @deals.each do |deal| %>
+                  <div id="itemListLeading">
+                    <div class="itemContainer itemContainerLast" style="width:100.0%;">
+                      <div class="catItemView groupLeading">
+                        <div class="catItemHeader">
+                          <div class="article-date">
+                            <span class="catItemDateCreated">
+                            <%= deal.created_at %></span>
+                          </div>
+                          <h3 class="catItemTitle">
+                            <a href="/deals/<%= deal.id %>" class= "deal_link"><%= deal.title %></a>
+                          </h3>
+                          <div class="catItemRatingBlock">
+                            <span>Rate this item</span>
+                            <div class="itemRatingForm">
+                              <ul class="itemRatingList">
+                                <li class="itemCurrentRating" id="itemCurrentRating42779" style="width:100%;"></li>
+                                <li><a href="#" rel="42779" title="1 star out of 5" class="one-star">1</a></li>
+                                <li><a href="#" rel="42779" title="2 stars out of 5" class="two-stars">2</a></li>
+                                <li><a href="#" rel="42779" title="3 stars out of 5" class="three-stars">3</a></li>
+                                <li><a href="#" rel="42779" title="4 stars out of 5" class="four-stars">4</a></li>
+                                <li><a href="#" rel="42779" title="5 stars out of 5" class="five-stars">5</a></li>
+                              </ul>
+                              <div id="itemRatingLog42779" class="itemRatingLog">(1 Vote)</div>
+                              <div class="clr"></div>
+                            </div>
+                            <div class="clr"></div>
+                          </div>
+                          <span class="catItemCategory">
+                            <span>Published in:</span>
+                            <a href="/itemlist/category/67-amazon-offers">Amazon Offers</a>
+                          </span>
+                        </div>
+                        <div class="catItemBody">
+                          <div class="catItemIntroText">
+                            <p style="text-align: left;"><%= image_tag deal.image.url, width: "150", height: "150" %><%= deal.description %><br /></p>
+                            <p style="text-align: left;"><span style="font-family: tahoma, arial, helvetica, sans-serif;"><span style="color: #000080;"><span style="color: #000000;"><span><span><span><span>Amazon Coupon - <span style="color: #ff0000;">Not required</span></span></span></span></span></span></span></span></p>
+                            <p style="text-align: right;"><%= link_to deal.url_link, class: "btn btn-primary boton" do %>Go to Deal Page <i class="fa fa-angle-double-right"></i><% end %></p> 
+                          </div>
+                          <div class="clr"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+              <div class="clr"></div>
+              <div class="k2Pagination">
+               <%= will_paginate @deals, :page_links => false %>
+                 <div class="clr"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
   </div>
-  <!-- carousel end -->
-  <br>
- 
-    <div class="column">  
-      <% @deals.each do |deal| %>
-        <div class="col-sm-4">
-          <div class="thumbnail"> 
-            <%= image_tag deal.image.url, width: "140", height: "140" %>
-            <div class="caption">
-              <h2><a href="/deals/<%= deal.id %>" class= "deal_link"><%= deal.title %></a></h2> 
-              <p><%= deal.description %></p> 
-              <p><%= link_to deal.url_link, class: "btn btn-primary boton" do %>Go To Deal Page <i class="fa fa-angle-double-right"></i><% end %></p>
-            </div>
-          </div>
-        </div> 
-      <% end %>
-    </div>  <!-- /.row -->
-   <!-- /.container -->
-    <!-- <div class = "row">
-      <%# @deals.each do |deal| %>
-        <div class = "col-sm-4 ">
-          <div class = "thumbnail img">
-             <%#= image_tag deal.image.url, width: "140px", height: "140px" %>
-          </div>
-          <div class = "caption">
-            <h3><%#= deal.title %></h3>
-            <p><%#= deal.description %></p>
-            <p><%#= link_to deal.url_link, class: "btn btn-primary boton" do %>Go To Deal Page<span class="fa fa-angle-double-right"></span><%# end %></p>
-          </div>
-        </div>
-      <%# end %>
-    </div> -->
-<div class="digg_pagination">
-<center>
-    <%= will_paginate @deals, :page_links => false %>
-</center>
-</div>
-</div>
+</body>
