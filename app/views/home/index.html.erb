@@ -1,10 +1,26 @@
-<body id="bd" class="bd fs3 com_k2">
-  <div id="ja-container" class="wrap ja-mf">
-    <div class="main">
-      <div class="main-inner1 clearfix">
-        <div id="ja-mainbody" style="width:100%">
-          <div class="inner clearfix">
-            <div id="ja-content" class="column" style="width:64%">
+ <!--header-img start ============================== -->
+<div class="container-fuild">
+  <section id="hero-area" style="position: absolute;
+      background-color: #1b325e;
+      height: 340px;
+      width: 1258px;">
+      <a class="navbar-brand" href="#">FreeDeal.com</a>
+    <div style="margin: 85px 0px 87px 760px;">
+      <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </section>
+</div>
+<!--Slider start============================== -->
+<section>
+  <div class="container">
+   <div class="row">
+      <div class="col-md-12">
+        <div class = "panel">
+          <div class = "panel-body">
+            <div class="col-md-8">
               <div class="itemList">
                 <% @deals.each do |deal| %>
                   <div id="itemListLeading">
@@ -50,17 +66,16 @@
                       </div>
                     </div>
                   </div>
+                  <hr style="border-top: 1px solid #060505;">
                 <% end %>
               </div>
-              <div class="clr"></div>
-              <div class="k2Pagination">
-               <%= will_paginate @deals, :page_links => false %>
-                 <div class="clr"></div>
-              </div>
             </div>
-          </div>
+          </div><!-- .container close -->
         </div>
+      </div>
       </div>
     </div>
   </div>
-</body>
+</section>
+   
+    
