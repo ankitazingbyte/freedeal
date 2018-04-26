@@ -1,19 +1,4 @@
- <!--header-img start ============================== -->
-<div class="container-fuild">
-  <section id="hero-area" style="position: absolute;
-      background-color: #1b325e;
-      height: 340px;
-      width: 1258px;">
-      <a class="navbar-brand" href="#">FreeDeal.com</a>
-    <div style="margin: 85px 0px 87px 760px;">
-      <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </section>
-</div>
-<!--Slider start============================== -->
+<!--list start============================== -->
 <section>
   <div class="container">
    <div class="row">
@@ -34,7 +19,7 @@
                           <h3 class="catItemTitle">
                             <a href="/deals/<%= deal.id %>" class= "deal_link"><%= deal.title %></a>
                           </h3>
-                          <div class="catItemRatingBlock">
+                          <!-- <div class="catItemRatingBlock">
                             <span>Rate this item</span>
                             <div class="itemRatingForm">
                               <ul class="itemRatingList">
@@ -49,12 +34,12 @@
                               <div class="clr"></div>
                             </div>
                             <div class="clr"></div>
-                          </div>
+                          </div> --><br>
                           <span class="catItemCategory">
                             <span>Published in:</span>
                             <a href="/itemlist/category/67-amazon-offers">Amazon Offers</a>
                           </span>
-                        </div>
+                        </div><br>
                         <div class="catItemBody">
                           <div class="catItemIntroText">
                             <p style="text-align: left;"><%= image_tag deal.image.url, width: "150", height: "150" %><%= deal.description %><br /></p>
@@ -66,7 +51,7 @@
                       </div>
                     </div>
                   </div>
-                  <hr style="border-top: 1px solid #060505;">
+                  <hr style="border-top: 1px solid #060505; border-style: dotted;">
                 <% end %>
               </div>
             </div>

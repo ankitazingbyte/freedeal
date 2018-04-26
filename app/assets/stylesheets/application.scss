@@ -15,15 +15,16 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
   nav .block {
     margin-top: -780px;
-    }
+  }
   .row {
     margin-left: 13px;
     margin-right: 8px;
     padding: 49px 39px;
     padding-top: 210px;
-    }
+  }
   .img{
    background-size: cover;
    display: block;
@@ -106,19 +107,28 @@
     text-decoration: none;
   }
   .footer {
-    padding: 74px 48px 27px 8px;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    line-height: 1.42857143;
+    position: absolute;
+    bottom: initial;
+    width: 100%;
+    background-color: #000000;
     color: #fff;
-    background-color: #222;
-    border-color: #080808; 
-    position: absolute;         
   }
-  .navbar-brand {
+  .brand {
     float: left;
-    padding: 89px 147px;
-    font-size: 30px;
+    padding: 98px 159px;
+    font-size: 37px;
     line-height: 29px;
     height: 50px;
-}
+    color: #e4e6e8;
+  }
+  .article-date {
+    width: 59px;
+    height: 48px;
+    padding-top: 6px;
+    padding-right: 3px;
+    margin-right: 7px;
+    color: #fff;
+    text-align: center;
+    float: left;
+    background-color: #1b325e;
+  }
