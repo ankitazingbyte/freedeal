@@ -1,6 +1,5 @@
-<p id="notice"><%= notice %></p>
-<section>
-  	<div class="container">
+<div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px; color: #0e0d0d!important;" id="pricing">  	
+	<div class="container" style="margin-top: -228px; margin-bottom: -50px;">
    		<div class="row">
       		<div class="col-md-12">
         		<div class = "panel">
@@ -27,56 +26,35 @@
           			<div class = "panel-body">
             			<div class="col-md-8">
               				<div class="itemList">
-								<div id="itemListLeading">
-				                    <div class="itemContainer itemContainerLast" style="width:100.0%;">
-				                      <div class="catItemView groupLeading">
-				                        <div class="catItemHeader">
-				                          <div class="article-date">
-				                            <span class="catItemDateCreated">
-				                            <%= @deal.created_at %></span>
-				                          </div>
-				                          <h3 class="catItemTitle">
-				                            <a href="/deals/<%= @deal.id %>" class= "deal_link"><%= @deal.title %></a>
-				                          </h3>
-				                        </div><hr style="border-top: 1px solid #060505; border-style: dotted;">
-
-				                        <div class="catItemBody">
-				                          <div class="catItemIntroText">
-				                            <p style="text-align: left;"><%= image_tag @deal.image.url, width: "150", height: "150" %><%= @deal.description %><br /></p>
-				                            <p style="text-align: left;"><span style="font-family: tahoma, arial, helvetica, sans-serif;"><span style="color: #000080;"><span style="color: #000000;"><span><span><span><span>Amazon Coupon - <span style="color: #ff0000;">Not required</span></span></span></span></span></span></span></span></p>
-				                            <p style="text-align: right;"><%= link_to @deal.url_link, class: "btn btn-primary boton" do %>Go to Deal Page <i class="fa fa-angle-double-right"></i><% end %></p> 
-				                          </div>
-				                          <div class="clr"></div>
-				                        </div>
-				                      </div>
-				                    </div>
-				                </div>
-				                <hr style="border-top: 1px solid #060505; border-style: dotted;">
-								<div class="itemFullText">
-									<p style="text-align: center;"></p>
-									<hr />
-									<p><span style="color: #800000; font-family: verdana, geneva;"><span style="font-size: small;"><strong>Offer in Details</strong> </span><span style="line-height: 1.3em;">:</span></span></p>
-									<ul>
-										<li>
-											<p><%= link_to "Visit deal page",root_path %></p>
-										</li>
-										<li>
-											<p><span style="color: #000000; font-family: verdana, geneva;">Add to cart<span><br /></span></span></p>
-										</li>
-										<li>
-											<p><span style="line-height: 1.3em; font-family: verdana, geneva; color: #000000;">Login or register</span></p>
-										</li>
-										<li>
-											<p><span style="line-height: 1.3em; font-family: verdana, geneva; color: #000000;">Update or select shipping details</span></p>
-										</li>
-										<li>
-											<p><span style="color: #000000; font-family: verdana, geneva; line-height: 1.3em;">Pay the amount</span></p>
-										</li>
-									</ul> 
+			                    <div style="width:100.0%;">
+			                        <div class="ItemHeader">
+			                            <div class="article-date">
+			                            	<%= @deal.created_at %></span>
+			                          	</div>
+			                          	<h3 class="col-sm-10">
+			                            	<a href="/deals/<%= @deal.id %>" class= "deal_link"><%= @deal.title %></a>
+			                          	</h3><br>
+			                        </div><br>
+			                          	<!-- <hr style="border-top: 1px solid #060505; border-style: dotted;"> -->
+			                        <div class="ItemBody">
+					                    <p style="text-align: left;" class="col-sm-3" ><%= image_tag @deal.image.url, width: "150", height: "150" %></p><p style="text-align: left;" class="col-sm-9"><%= @deal.description %><br /></p>
+					                    <p style="text-align: left;"><span style="font-family: tahoma, arial, helvetica, sans-serif;"><span style="color: #000080;"><span style="color: #000000;"><span><span><span><span>Amazon Coupon - <span style="color: #ff0000;">Not required</span></span></span></span></span></span></span></span></p>
+					                    <p style="text-align: right;"><%= link_to @deal.url_link, class: "btn btn-primary boton" do %> Go to Deal Page <i class="fa fa-angle-double-right"></i><% end %></p>
+					                    <div class="clr"></div>
+					                	<hr style="border-top: 1px solid #060505; border-style: dotted;">
+										<hr />
+										<p style="text-align: left;"><span style="color: #800000;><span style="font-size: small;"><strong>Offer in Details</strong> </span><span style="line-height: 1.3em;">:</span></span></p>
+										<ul>
+											<li style="text-align: left;"><p><%= link_to "Visit deal page",root_path %></p></li>
+											<li style="text-align: left;"><p><span style="color: #000000; font-family: verdana, geneva;">Add to cart<span><br /></span></span></p></li>
+											<li style="text-align: left;"><p><span style="line-height: 1.3em; font-family: verdana, geneva; color: #000000;">Login or register</span></p></li>
+											<li style="text-align: left;"><p><span style="line-height: 1.3em; font-family: verdana, geneva; color: #000000;">Update or select shipping details</span></p></li>
+											<li style="text-align: left;"><p><span style="color: #000000; font-family: verdana, geneva; line-height: 1.3em;">Pay the amount</span></p></li>
+										</ul>
+									</div>
 								</div>
-								<div class="clr"></div>
-								<div class="clr"></div>
-								<div class="itemSocialSharing">
+								<hr style="border-top: 1px solid #060505; border-style: dotted;"><hr />
+								<!-- <div class="itemSocialSharing">
 									<div class="itemTwitterButton">
 										<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="getfreedealz">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
 									</div>
@@ -110,9 +88,6 @@
 									<span class="itemHits"> Read <b>14</b> times </span>
 									<div class="clr"></div>
 								</div>
-								<div class="itemLinks">
-									<div class="clr"></div>
-								</div>
 								<div class="itemRelated">
 									<h3>Related items</h3>
 									<ul>
@@ -140,8 +115,8 @@
 									<span class="itemNavigationTitle">More in this category:</span>
 									<a class="itemPrevious" href="/item/42855-billion-cy143-non-stick-induction-bottom-cookware-set-rs-1019">&laquo; Billion CY143 Non Stick Induction Bottom Cookware Set Rs. 1019 </a>
 									<a class="itemNext" href="/item/42805-luke-and-lilly-wall-sticker-upto-85-off-from-rs-119">Luke and Lilly Wall Sticker Upto 85% Off From Rs. 119 &raquo;</a>
-								</div>
-								<a name="itemCommentsAnchor" id="itemCommentsAnchor"></a>
+								</div> -->
+								<!-- <a name="itemCommentsAnchor" id="itemCommentsAnchor"></a> -->
 								<div class="itemComments">
 									<div class="itemCommentsForm">
 										<div class="formTitle">
@@ -172,45 +147,47 @@
 								</div>
 							</div>
 						</div>
+						<!-- Advertise -->
 						<div class="col-md-4">
 							<div class="clr"></div>
-								<div id="ja-inset2" class="ja-col column ja-inset2" style="width:36%">
-									<div class="ja-moduletable moduletable  clearfix" id="Mod127">
-										<div class="ja-box-ct clearfix">
-											<div class="bannergroup">
-												<div class="banneritem">
-													<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-													<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-7698440629108864" data-ad-slot="6371016993"></ins>
-													<script>
-													(adsbygoogle = window.adsbygoogle || []).push({});
-													</script> <div class="clr">
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="ja-moduletable moduletable  clearfix" id="Mod133">
+							<div id="ja-inset2" class="ja-col column ja-inset2" style="width:36%">
+								<div class="ja-moduletable moduletable  clearfix" id="Mod127">
 									<div class="ja-box-ct clearfix">
 										<div class="bannergroup">
 											<div class="banneritem">
 												<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-													<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-7698440629108864" data-ad-slot="4754682990"></ins>
+												<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-7698440629108864" data-ad-slot="6371016993"></ins>
 												<script>
-													(adsbygoogle = window.adsbygoogle || []).push({});
-												</script> <div class="clr"></div>
+												(adsbygoogle = window.adsbygoogle || []).push({});
+												</script> 
+												<div class="clr"></div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div id="ja-botsl" class="wrap ">
-									<div class="main">
-										<div class="main-inner1 clearfix">
-											<script type="text/javascript">
-											    window.addEvent('load', function (){ equalHeight ('#ja-botsl .ja-box') });
-											</script> 
+							</div>
+							<div class="ja-moduletable moduletable  clearfix" id="Mod133">
+								<div class="ja-box-ct clearfix">
+									<div class="bannergroup">
+										<div class="banneritem">
+											<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+												<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-7698440629108864" data-ad-slot="4754682990"></ins>
+											<script>
+												(adsbygoogle = window.adsbygoogle || []).push({});
+											</script> <div class="clr"></div>
 										</div>
 									</div>
 								</div>
+							</div>
+							<div id="ja-botsl" class="wrap ">
+								<div class="main">
+									<div class="main-inner1 clearfix">
+										<script type="text/javascript">
+										    window.addEvent('load', function (){ equalHeight ('#ja-botsl .ja-box') });
+										</script> 
+									</div>
+								</div>
+							</div>
 						</div>
 						<!-- Advertise End -->
 					</div>
@@ -218,4 +195,4 @@
 			</div>
 		</div>
 	</div>
-</section>
+</div>

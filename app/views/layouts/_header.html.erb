@@ -1,31 +1,78 @@
-<nav class="navbar" style="background-color: #1b325e; margin: 0 -1px;">
-  <div class="container-fluid">
-    <div class="navbar-header">
-    </div>
-    <div class="column">
-      <div class="col-md-6">
-        <ul class="nav navbar-nav" style="float: right; padding-right: 225px; font-size: 20px; color:#fff;">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Page 1</a></li>
-          <li><a href="#">Page 2</a></li>
-        </ul>
-      </div>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <%=link_to "FREEDEALs", root_path, class: "w3-bar-item w3-button w3-wide" %>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <!-- <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a> -->
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+      <% if current_user.nil? %>
+        <%= link_to new_user_session_path, class: 'w3-bar-item w3-button' do %>SING IN<% end %>
+      <% else %>
+        <%= link_to destroy_user_session_path,class: 'w3-bar-item w3-button', method: :delete do %>LOG OUT<i class="fa fa-power-off"></i><% end %>
+      <% end %>
     </div>
   </div>
-  <hr style="border-top: 2px solid #fff; border-style: dotted;">
-</nav>
- <!--header-img start ============================== -->
-<div class="container-fuild">
-  <section id="hero-area" style="position: absolute; 
-      background-color: #1b325e;
-      height: 340px;
-      width: 1258px;">
-      <a class="brand" href="#">FreeDeals.com</a>
-    <div style="margin: 85px 0px 87px 760px;">
-      <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</div>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">Get Free Deals</span><br>
+    <!-- <span class="w3-xxlarge w3-hide-large w3-hide-medium">BEST ONLINE DEALS & FREE SAMPLES</span><br>  -->
+    <span class="w3-medium">BEST ONLINE DEALS & FREE SAMPLES</span> 
+    <!-- <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p> -->
+  </div>
+  <!-- <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div> -->
+</header>
+
+
+
+
+
+
+
+
+<!-- Contact Section -->
+<!-- <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTACT</h3>
+  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-half">
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chicago, US</p>
+      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+      <br>
+      <form action="/action_page.php" target="_blank">
+        <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+        <p>
+          <button class="w3-button w3-black" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </p>
       </form>
     </div>
-  </section>
-</div>
+    <div class="w3-half">
+      <! Add Google Maps -->
+<!--       <div id="googleMap" class="w3-greyscale-max" style="width:100%;height:510px;"></div>
+    </div>
+  </div>
+</div>  -->
+
+
+ 
+
+

@@ -1,66 +1,124 @@
-<!--list start============================== -->
-<section>
-  <div class="container">
+<!-- Pricing Section -->
+<div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px; color: #0e0d0d!important;" id="pricing">
+  <div class="container" style="margin-top: -228px;">
    <div class="row">
       <div class="col-md-12">
         <div class = "panel">
+          <!-- Advertise -->
+          <div id="ja-slideshow" class="wrap ">
+            <div class="main clearfix">
+              <div class="bannergroup">
+                <div class="banneritem">
+                  <script type="text/javascript"><!--
+                  google_ad_client = "ca-pub-7698440629108864";
+                  /* widest */
+                  google_ad_slot = "7401308193";
+                  google_ad_width = 970;
+                  google_ad_height = 90;
+                  //-->
+                  </script>
+                  <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                  </script> <div class="clr"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <!-- Advertise End -->
           <div class = "panel-body">
+<!--list start============================== -->
             <div class="col-md-8">
               <div class="itemList">
                 <% @deals.each do |deal| %>
-                  <div id="itemListLeading">
-                    <div class="itemContainer itemContainerLast" style="width:100.0%;">
-                      <div class="catItemView groupLeading">
-                        <div class="catItemHeader">
-                          <div class="article-date">
-                            <span class="catItemDateCreated">
-                            <%= deal.created_at %></span>
-                          </div>
-                          <h3 class="catItemTitle">
-                            <a href="/deals/<%= deal.id %>" class= "deal_link"><%= deal.title %></a>
-                          </h3>
-                          <!-- <div class="catItemRatingBlock">
-                            <span>Rate this item</span>
-                            <div class="itemRatingForm">
-                              <ul class="itemRatingList">
-                                <li class="itemCurrentRating" id="itemCurrentRating42779" style="width:100%;"></li>
-                                <li><a href="#" rel="42779" title="1 star out of 5" class="one-star">1</a></li>
-                                <li><a href="#" rel="42779" title="2 stars out of 5" class="two-stars">2</a></li>
-                                <li><a href="#" rel="42779" title="3 stars out of 5" class="three-stars">3</a></li>
-                                <li><a href="#" rel="42779" title="4 stars out of 5" class="four-stars">4</a></li>
-                                <li><a href="#" rel="42779" title="5 stars out of 5" class="five-stars">5</a></li>
-                              </ul>
-                              <div id="itemRatingLog42779" class="itemRatingLog">(1 Vote)</div>
-                              <div class="clr"></div>
-                            </div>
+                    <div style="width:100.0%;">
+                      <div class="ItemHeader">
+                        <div class="article-date ">
+                          <%= deal.created_at %>
+                        </div>
+                        <h3 class="col-sm-10">
+                          <a href="/deals/<%= deal.id %>" class="deal_link"><%= deal.title %></a>
+                        </h3>
+                        <!-- <div class="catItemRatingBlock">
+                          <span>Rate this item</span>
+                          <div class="itemRatingForm">
+                            <ul class="itemRatingList">
+                              <li class="itemCurrentRating" id="itemCurrentRating42779" style="width:100%;"></li>
+                              <li><a href="#" rel="42779" title="1 star out of 5" class="one-star">1</a></li>
+                              <li><a href="#" rel="42779" title="2 stars out of 5" class="two-stars">2</a></li>
+                              <li><a href="#" rel="42779" title="3 stars out of 5" class="three-stars">3</a></li>
+                              <li><a href="#" rel="42779" title="4 stars out of 5" class="four-stars">4</a></li>
+                              <li><a href="#" rel="42779" title="5 stars out of 5" class="five-stars">5</a></li>
+                            </ul>
+                            <div id="itemRatingLog42779" class="itemRatingLog">(1 Vote)</div>
                             <div class="clr"></div>
-                          </div> --><br>
-                          <span class="catItemCategory">
-                            <span>Published in:</span>
-                            <a href="/itemlist/category/67-amazon-offers">Amazon Offers</a>
-                          </span>
-                        </div><br>
-                        <div class="catItemBody">
-                          <div class="catItemIntroText">
-                            <p style="text-align: left;"><%= image_tag deal.image.url, width: "150", height: "150" %><%= deal.description %><br /></p>
-                            <p style="text-align: left;"><span style="font-family: tahoma, arial, helvetica, sans-serif;"><span style="color: #000080;"><span style="color: #000000;"><span><span><span><span>Amazon Coupon - <span style="color: #ff0000;">Not required</span></span></span></span></span></span></span></span></p>
-                            <p style="text-align: right;"><%= link_to deal.url_link, class: "btn btn-primary boton" do %>Go to Deal Page <i class="fa fa-angle-double-right"></i><% end %></p> 
                           </div>
                           <div class="clr"></div>
-                        </div>
+                        </div> -->
+                        <br>
+                        <span class="ItemCategory">
+                          <span>Published in:</span>
+                          <a href="/itemlist/category/67-amazon-offers">Amazon Offers</a>
+                        </span>
+                      </div><br>
+                      <div class="ItemBody">
+                        <p style="text-align: left;" class="col-sm-3" ><%= image_tag deal.image.url, width: "150", height: "150" %></p><p style="text-align: left;" class="col-sm-9"><%= deal.description %><br /></p>
+                        <p style="text-align: left;"><span style="font-family: tahoma, arial, helvetica, sans-serif;"><span style="color: #000080;"><span style="color: #000000;"><span><span><span><span>Amazon Coupon - <span style="color: #ff0000;">Not required</span></span></span></span></span></span></span></span></p>
+                        <p style="text-align: right;"><%= link_to deal.url_link, class: "btn btn-primary boton" do %> Go to Deal Page <i class="fa fa-angle-double-right"></i><% end %></p>
+                        <div class="clr"></div>
                       </div>
                     </div>
-                  </div>
                   <hr style="border-top: 1px solid #060505; border-style: dotted;">
                 <% end %>
               </div>
             </div>
+            <!-- Advertise -->
+            <div class="col-md-4">
+              <div class="clr"></div>
+                <div id="ja-inset2" class="ja-col column ja-inset2" style="width:36%">
+                  <div class="ja-moduletable moduletable  clearfix" id="Mod127">
+                    <div class="ja-box-ct clearfix">
+                      <div class="bannergroup">
+                        <div class="banneritem">
+                          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                          <ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-7698440629108864" data-ad-slot="6371016993"></ins>
+                          <script>
+                          (adsbygoogle = window.adsbygoogle || []).push({});
+                          </script> <div class="clr">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ja-moduletable moduletable  clearfix" id="Mod133">
+                  <div class="ja-box-ct clearfix">
+                    <div class="bannergroup">
+                      <div class="banneritem">
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                          <ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-7698440629108864" data-ad-slot="4754682990"></ins>
+                        <script>
+                          (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script> <div class="clr"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="ja-botsl" class="wrap ">
+                  <div class="main">
+                    <div class="main-inner1 clearfix">
+                      <script type="text/javascript">
+                          window.addEvent('load', function (){ equalHeight ('#ja-botsl .ja-box') });
+                      </script> 
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- Advertise End -->
           </div><!-- .container close -->
         </div>
       </div>
       </div>
     </div>
   </div>
-</section>
+</div>
+
    
     
