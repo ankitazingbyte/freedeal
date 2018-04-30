@@ -16,17 +16,10 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
-
-.row {
-  margin-left: 13px;
-  margin-right: 8px;
-  padding: 49px 39px;
-  padding-top: 210px;
-}
 .boton{
-  background-color: #4ca0af;
+  background-color: #fff !important;
   border: none;
-  color: #fff !important;
+  color: #2b87db !important;
   padding: 2px;
   text-align: center;
   text-decoration: none;
@@ -34,7 +27,30 @@
   font-size: 24px;
   margin: 10px 27px;
   cursor: pointer;
-  border-radius: 12px;
+  border-radius: 25px;
+  border: dotted;
+}
+.boton2{
+  background-color: #2196f3 !important;
+  border: none;
+  color: #fff !important;
+  padding: 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 96px 0px;
+  cursor: pointer;
+}
+.div1 {
+  width: 360px;
+  height: 130px;
+  position: absolute;
+  margin: -96px 0px;
+  padding: 0px 44px;
+  background-color: #2196f3;
+  font-size: 50px;
+  color: white;
 }
 .article-date {
   width: 59px;
@@ -45,32 +61,23 @@
   background-color: #1b325e;
 }
 .transbox {
-  margin: 30px;
-  background-color: #ffffff;
-  border: 1px solid black;
-  opacity: 0.6;
-  filter: alpha(opacity=60); /* For IE8 and earlier */
-}
-.transbox {
-  position: absolute;
   color: white;
-  width: 332px;
-  height: 61px;
+  width: 361px;
+  height: 72px;
   background-color: #3096f3;
   border: 1px solid black;
   opacity: 0.9;
-  padding: 69px 134px;
-  margin: 419px 72px;
-}
-.transbox p{
-  margin: -40px -110px 8px;
+  padding: 93px 68px;
+  margin: 36px 161px;
   font-size: 25px;
+  margin: 24px 180px 78px;
 }
+
 .search-container button {
   float: right;
-  padding: 6px 10px;
-  margin-top: 29px;
-  margin-right: 34px;
+  padding: 0px 10px;
+  margin-top: 18px;
+  margin-right: 414px;
   background: #2784c4;
   color: white;
   font-size: 31px;
@@ -78,15 +85,29 @@
   cursor: pointer;
 }
 .search-container input {
-  padding: 6px 10px;
-  margin-top: 29px;
-  margin-right: 34px;
-  font-size: 31px;
+  padding: 0px 22px;
+  margin-top: 11px;
+  margin-right: 0px;
+  font-size: 30px;
   border: 1px solid grey;
   cursor: pointer;
   position: absolute;
-    top:8px;
-    left:8px;
-    opacity: .5;
-    z-index: 1000;
+  top:21px;
+  left:80px;
+  opacity: .5;
+  z-index: 1000;
+}
+.circle {
+position: absolute;
+  width: 74px;
+  height: 74px;
+  background: #2196f3;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  margin: -22px 1066px;
+}
+.circle p{
+margin: 6px 20px;
+color: white;
 }
