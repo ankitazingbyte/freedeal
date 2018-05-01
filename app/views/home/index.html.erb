@@ -1,4 +1,4 @@
-<div class="container" style="margin-top: -228px;">
+<div class="container" >
   <div class= "row">
     <div class="col-md-8">
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -11,30 +11,31 @@
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
-          <div class="item active">
-            <%= image_tag "sunset.jpg" %><div class="carousel-caption">
-            <h1>BIG SALE ON SMART PHONES</h1>
-            <h3>Welcome To GETFREEDEALS</h3>
-            <a href="custom-hats.html" class="btn btn boton2">Go to Deal Page</a>
-          </div>
+          <div class="item active img">
+            <%= image_tag "deal_01.jpg", class: "img"%>
+            <div class="carousel-caption">
+              <h1>BIG SALE ON SMART PHONES</h1>
+              <h3>Welcome To GETFREEDEALS</h3>
+              <a href="custom-hats.html" class="btn btn boton2">Go to Deal Page</a>
+            </div>
           </div>
 
-          <div class="item">
-            <%= image_tag "sunset.jpg" %>
+          <div class="item img">
+            <%= image_tag "int.jpg", class: "img" %>
             <div class="carousel-caption">
-            <h1>BIG SALE ON SMART PHONES</h1>
-            <h3>Welcome To GETFREEDEALS</h3>
-            <a href="custom-hats.html" class="btn btn boton2">Go to Deal Page</a>
-          </div>
+              <h1>BIG SALE ON SMART PHONES</h1>
+              <h3>Welcome To GETFREEDEALS</h3>
+              <a href="custom-hats.html" class="btn btn boton2">Go to Deal Page</a>
+            </div>
           </div>
 
-          <div class="item">
-            <%= image_tag "sunset.jpg" %>
+          <div class="item img">
+            <%= image_tag "sunset.jpg",class: "img" %>
             <div class="carousel-caption">
-            <h1>BIG SALE ON SMART PHONES</h1>
-            <h3>Welcome To GETFREEDEALS</h3>
-            <a href="custom-hats.html" class="btn btn boton2">Go to Deal Page</a>
-          </div>
+              <h1>BIG SALE ON SMART PHONES</h1>
+              <h3>Welcome To GETFREEDEALS</h3>
+              <a href="custom-hats.html" class="btn btn boton2">Go to Deal Page</a>
+            </div>
           </div>
         </div>
 
@@ -51,7 +52,7 @@
     </div>
     <div class="col-md-4">
       <%= image_tag "children.jpeg", width: "361px", height: "357px" %>
-      <div class="div1"><b><h1>Summer Deal</h1>For Kids</b></div>
+      <div class="div1"><center><b><h1>SUMMER DEAL</h1>FOR KIDS</b></center></div>
     </div>
   </div>
   <br><br><br><br>
@@ -63,20 +64,18 @@
         <%= image_tag "beauty_makeup.jpg", width: "750px", height: "258px" %>
       </div>
       <div class="transbox">
-        <p><b>UP TO 45% OFF</b> HEALTH & COSMETICS</p>
+        <h><b>UP TO 45% OFF</b> HEALTH & COSMETICS</h>
       </div>
     </div>
   </div>
   <div class="col-md-12">
     <div class="search-container">
-      <form >
+      <form>
         <input type="text" placeholder="Search.." name="search">
         <button type="submit">Submit</button>
       </form>
     </div>
   </div>
-</div>
-<div class="container" style="margin-top: -228px;">
   <div class="row">
     <div class="col-md-12">
       <div class = "panel">
@@ -104,36 +103,36 @@
           <!-- <div class="col-md-12"> -->
           <div class="itemList">
             <% @deals.each do |deal| %>
-                <div class="row">
-                  <div class="panel panel-default">
-                      <div class="pull-left">
-                          <p><%= image_tag deal.image.url, width: "350", height: "287" %></p>
+              <div class="row">
+                <div class="panel panel-default">
+                  <div class="pull-left">
+                    <p><%= image_tag deal.image.url, width: "350", height: "287" %></p>
+                  </div>
+                  <div class="panel-body">
+                    <div class="col-md-8">
+                      <div class="ItemHeader">
+                        <h3>
+                          <a href="/deals/<%= deal.id %>" class="deal_link"><%= deal.title %></a>
+                        </h3>
                       </div>
-                    <div class="panel-body">
-                      <div class="col-md-8">
-                        <div class="ItemHeader">
-                          <h3>
-                            <a href="/deals/<%= deal.id %>" class="deal_link"><%= deal.title %></a>
-                          </h3>
-                        </div>
-                        <p><%= deal.description %><br></p>
-                        <div class="ItemBody">
-                          <p style="text-align: left;">
-                            <span>Published in:</span>
-                            <a href="/itemlist/category/67-amazon-offers">Amazon Offers</a><br>
-                            <span>Date: <%= deal.created_at %></span><br>
-                            <span>Product Review: Good</span>
-                          </p>
-                          <p style="text-align: right;"><%= link_to deal.url_link, class: " boton" do %> Go to Deal Page </i><% end %>
-                          </p>
-                        </div>
-                      </div>
-                      <div class="circle">
-                        <p>GET 35% OFF</p>
+                      <p><%= deal.description %><br></p>
+                      <div class="ItemBody">
+                        <p style="text-align: left;">
+                          <span>Published in:</span>
+                          <a href="/itemlist/category/67-amazon-offers">Amazon Offers</a><br>
+                          <span>Date: <%= deal.created_at %></span><br>
+                          <span>Product Review: Good</span>
+                        </p>
+                        <p style="text-align: right;"><%= link_to deal.url_link, class: "boton" do %> Go to Deal Page <% end %>
+                        </p>
                       </div>
                     </div>
+                    <div class="circle">
+                      <p>GET 35% OFF</p>
+                    </div>
                   </div>
-                </div><br>
+                </div>
+              </div><br>
             <% end %>
           </div>
          <!--  </div> -->
@@ -184,6 +183,23 @@
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-3">
+       <div class="col-md-4" style="background-color: #e8e8e8; height: 212px; width: 367px;">
+      </div>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag "image.jpg", width: "205px", height: "212px"%>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag "int.jpg", width: "205px", height: "212px" %>
+    </div>
+    <div class="col-md-3">
+       <div class="col-md-4" style="background-color: #060606; height: 212px; width: 280px; margin: 0px -54px;">
+      </div>
+    </div>
+  </div>
+  <br><br>
 </div>
 
 
