@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180428061041) do
+ActiveRecord::Schema.define(version: 20180502105512) do
 
   create_table "comments", force: :cascade do |t|
     t.string "name"
@@ -28,6 +28,46 @@ ActiveRecord::Schema.define(version: 20180428061041) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "url_link"
+  end
+
+  create_table "product2s", force: :cascade do |t|
+    t.string "image"
+    t.string "title"
+    t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "product3s", force: :cascade do |t|
+    t.string "image"
+    t.string "title"
+    t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "product4s", force: :cascade do |t|
+    t.string "image"
+    t.string "title"
+    t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "product5s", force: :cascade do |t|
+    t.string "image"
+    t.string "title"
+    t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "image"
+    t.string "title"
+    t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "roles", force: :cascade do |t|

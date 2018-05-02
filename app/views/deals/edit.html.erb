@@ -1,6 +1,7 @@
-<h1>Editing Deal</h1>
-
-<%= render 'form', deal: @deal %>
-
-<%= link_to 'Show', @deal %> |
-<%= link_to 'Back', deals_path %>
+<div class="container">
+	<div class="panel panel-default">
+	    <div class="panel-heading">DEAL</div>
+	    <div class="panel-body"><%= render 'form', deal: @deal %></div>
+	</div>
+	<%= link_to 'Back', deals_path %>
+</div>

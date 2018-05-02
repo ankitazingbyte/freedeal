@@ -1,0 +1,31 @@
+<%= form_with(model: product2, local: true) do |form| %>
+  <% if product2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(product2.errors.count, "error") %> prohibited this product2 from being saved:</h2>
+
+      <ul>
+      <% product2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :url %>
+    <%= form.text_field :url_link, class: "form-control" %>
+  </div>
+  <div class="actions">
+    <%= form.submit "submit", class: "pull-right" %>
+  </div>
+<% end %>

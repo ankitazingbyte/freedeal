@@ -9,16 +9,40 @@
       <ul class="nav navbar-nav pull-right" style="font-size: 19px; margin: 0px;">
         <!-- <li class="active"><a href="#">Home</a></li> -->
         <li class="brand" style="background-color: #3096f3;"><%= link_to "Home", root_path, class: "w3-bar-item w3-blue" %></li>
-        <li style="padding-top: 35px;"><a href="#team" class="w3-bar-item w3-button">BLOGS</a></li>
-        <li style="padding-top: 35px;"><a href="#work" class="w3-bar-item w3-button">NEWS</a></li>
-        <li style="padding-top: 35px;"><a href="#pricing" class="w3-bar-item w3-button">DISCLAIMER</a></li> 
-        <li style="padding-top: 35px;"><a href="#contact" class="w3-bar-item w3-button">CONTACT US</a></li>
-        <li style="padding-top: 35px;"><% if current_user.nil? %>
+        <% if current_user.nil? %>
+          <li style="padding-top: 35px;"><a href="#team" class="w3-bar-item w3-button">BLOGS</a></li>
+        <% else %>
+          <li style="padding-top: 35px;"><%= link_to new_deal_path, class: 'w3-bar-item w3-button' do %>DEALS<% end %></li>
+        <% end %>
+        <% if user_signed_in? %>
+          <li style="padding-top: 35px;"><%= link_to new_product_path, class: 'w3-bar-item w3-button' do %>Product1<% end %></li>
+        <% end %>
+        <% if user_signed_in? %>
+          <li style="padding-top: 35px;"><%= link_to new_product2_path, class: 'w3-bar-item w3-button' do %>Product2<% end %></li>
+        <% end %>
+        <% if current_user.nil? %>
+          <li style="padding-top: 35px;"><a href="#work" class="w3-bar-item w3-button">NEWS</a></li>
+        <% else %>
+          <li style="padding-top: 35px;"><%= link_to new_product3_path, class: 'w3-bar-item w3-button' do %>Product3<% end %></li>
+        <% end %>
+        <% if current_user.nil? %>
+          <li style="padding-top: 35px;"><a href="#pricing" class="w3-bar-item w3-button">DISCLAIMER</a></li> 
+        <% else %>
+          <li style="padding-top: 35px;"><%= link_to new_product4_path, class: 'w3-bar-item w3-button' do %>Product4<% end %></li>
+        <% end %>
+        <% if current_user.nil? %>
+          <li style="padding-top: 35px;"><a href="#contact" class="w3-bar-item w3-button">CONTACT US</a></li> 
+        <% else %>
+          <li style="padding-top: 35px;"><%= link_to new_product5_path, class: 'w3-bar-item w3-button' do %>Product5<% end %></li>
+        <% end %>
+          
+          <li style="padding-top: 35px;">
+            <% if current_user.nil? %>
               <%= link_to new_user_session_path, class: 'w3-bar-item w3-button' do %>SING IN<% end %>
             <% else %>
               <%= link_to destroy_user_session_path,class: 'w3-bar-item w3-button', method: :delete do %>LOG OUT<i class="fa fa-power-off"></i><% end %>
             <% end %>
-        </li>
+          </li>
       </ul>
     </div>
   </div>

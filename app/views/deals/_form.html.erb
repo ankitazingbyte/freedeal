@@ -1,35 +1,36 @@
 <%= form_for @deal do |form| %>
-  <% if @deal.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(deal.errors.count, "error") %> prohibited this deal from being saved:</h2>
-      <ul>
-        <% deal.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+    <% if @deal.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(deal.errors.count, "error") %> prohibited this deal from being saved:</h2>
+        <ul>
+          <% deal.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :image %>
-    <%= form.file_field :image, id: :deal_image %>
+    <%= form.file_field :image %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title, id: :deal_title %>
+    <%= form.text_field :title, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_field :description, id: :deal_description %>
+    <%= form.text_area :description, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :url %>
-    <%= form.text_field :url_link %>
+    <%= form.text_field :url_link, class: "form-control" %>
   </div>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "submit", class: "pull-right" %>
   </div>
 <% end %>
+
