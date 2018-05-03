@@ -1,7 +1,8 @@
 class HomeController < ApplicationController
   def index
   	@deals = Deal.all
-    @deals = Deal.all.paginate(page: params[:page], per_page: 6)
+    @deals = Deal.paginate(page: params[:page])
+    @deals = Deal.search(params[:search]) if params[:search].present?
     @products = Product.all
     @product2s = Product2.all
     @product3s = Product3.all

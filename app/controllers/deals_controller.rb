@@ -5,6 +5,8 @@ class DealsController < ApplicationController
   # GET /deals.json
   def index
     @deals = Deal.all
+    @deals = Deal.paginate(page: params[:page])
+    @deals = Deal.search(params[:search]) if params[:search].present?
   end
 
   # GET /deals/1
@@ -69,6 +71,6 @@ class DealsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def deal_params
-      params.require(:deal).permit(:image, :title, :description, :url_link)
+      params.require(:deal).permit(:image, :title, :description, :url_link, :discount)
     end
 end

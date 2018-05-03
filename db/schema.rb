@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180502105512) do
+ActiveRecord::Schema.define(version: 20180503100425) do
 
   create_table "comments", force: :cascade do |t|
     t.string "name"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20180502105512) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "url_link"
+    t.string "discount"
   end
 
   create_table "product2s", force: :cascade do |t|

@@ -35,7 +35,7 @@
         <% else %>
           <li style="padding-top: 35px;"><%= link_to new_product5_path, class: 'w3-bar-item w3-button' do %>Product5<% end %></li>
         <% end %>
-          
+        <% if user_signed_in? %>
           <li style="padding-top: 35px;">
             <% if current_user.nil? %>
               <%= link_to new_user_session_path, class: 'w3-bar-item w3-button' do %>SING IN<% end %>
@@ -43,6 +43,7 @@
               <%= link_to destroy_user_session_path,class: 'w3-bar-item w3-button', method: :delete do %>LOG OUT<i class="fa fa-power-off"></i><% end %>
             <% end %>
           </li>
+        <% end %>
       </ul>
     </div>
   </div>
