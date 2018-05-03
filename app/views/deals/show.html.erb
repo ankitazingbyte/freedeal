@@ -38,7 +38,7 @@
 		                        <div class="ItemBody">
 				                    <p style="text-align: left;" class="col-sm-3" ><%= image_tag @deal.image.url, width: "150", height: "150" %></p><p style="text-align: left;" class="col-sm-9"><%= @deal.description %><br /></p>
 				                    <p style="text-align: left;"><span style="font-family: tahoma, arial, helvetica, sans-serif;"><span style="color: #000080;"><span style="color: #000000;"><span><span><span><span>Amazon Coupon - <span style="color: #ff0000;">Not required</span></span></span></span></span></span></span></span></p>
-				                    <p style="text-align: right;"><%= link_to @deal.url_link, class: "btn btn-primary boton" do %> Go to Deal Page <i class="fa fa-angle-double-right"></i><% end %></p>
+				                    <p style="text-align: right;"><%= link_to @deal.link, class: "btn btn-primary boton" do %> Go to Deal Page <i class="fa fa-angle-double-right"></i><% end %></p>
 				                    <div class="clr"></div>
 				                	<hr style="border-top: 1px solid #060505; border-style: dotted;">
 									<hr />
