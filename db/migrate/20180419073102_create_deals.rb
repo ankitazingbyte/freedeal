@@ -4,7 +4,7 @@ class CreateDeals < ActiveRecord::Migration[5.1]
       t.string :image
       t.string :title
       t.string :description
-      t.string :url_link
+      t.string :link
       t.timestamps
     end
   end
