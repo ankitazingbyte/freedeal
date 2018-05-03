@@ -25,9 +25,9 @@ ActiveRecord::Schema.define(version: 20180503100425) do
     t.string "image"
     t.string "title"
     t.string "description"
+    t.string "url_link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "url_link"
     t.string "discount"
   end
 
