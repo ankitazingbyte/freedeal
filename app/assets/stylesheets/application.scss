@@ -49,6 +49,36 @@
   margin: 96px 0px;
   cursor: pointer;
 }
+.boton3{
+  background-color: #fff !important;
+  border: none;
+  color: #2b87db !important;
+  padding: 4px 23px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 138px 15px;
+  cursor: pointer;
+  border-radius: 29px;
+  border: dotted;
+  position: absolute;
+}
+.boton4{
+ background-color: #337b84 !important;
+  border: none;
+  color: #fff !important;
+  padding: 4px 23px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 125px -50px;
+  cursor: pointer;
+  border-radius: 29px;
+  border: dotted;
+  position: absolute;
+}
 .div1 {
   width: 360px;
   height: 130px;
@@ -130,9 +160,9 @@
   width: 360px;
   height: 72px;
   opacity: 0.9;
-  padding: 14px 40px ;
+  padding: 0px 47px ;
   font-size: 25px;
-  margin: 24px -580px;
+  margin: -179px -305px;
   position: absolute;
 }
 .head2 h{
@@ -140,13 +170,25 @@
   width: 360px;
   height: 72px;
   opacity: 0.9;
-  padding: 15px 35px;
+  padding: 20px 60px;
   font-size: 25px;
-  margin: 20px -380px;
+  margin: 11px -95px;
   position: absolute;
 }
 
 .search{
   width: 62%;
   height: 39px;
+}
+.card {
+  background: #fffcfc;
+  border-radius: 2px;
+  display: inline-block;
+  height: 480px;
+  margin: 0px 0px;
+  position: relative;
+  width: 500px;
+}
+.card-1:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }

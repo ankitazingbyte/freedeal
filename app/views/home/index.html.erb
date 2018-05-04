@@ -63,12 +63,12 @@
         <div class="col-md-4" style="background-color: #060606; height: 257px; width: 367px;">
         </div>    
         <div class="col-md-8">
-          <% @product3s.each do |product3| %>
-            <%= image_tag product3.image.url, width: "750px", height: "258px" %>
-          <% end %>
+          <%# @product3s.each do |product3| %>
+            <%= image_tag @product3s.first.image.url, width: "750px", height: "258px" %>
+          <%# end %>
         </div>
         <div class="transbox">
-          <h><b>UP TO 45% OFF</b> HEALTH & COSMETICS<%#= product3.title %></h>
+          <h><b>UP TO 45% OFF</b> <%= @product3s.first.title %></h>
         </div>
     </div>
   </div><br>
@@ -202,26 +202,30 @@
     <div class="col-md-3">
       <div class="col-md-4" style="background-color: #eeeef0; height: 212px; width: 367px; position: absolute;">
       </div>
+      <div><%= link_to @product5s.first.url, class: "boton3" do %> Go to Deal Page <% end %>
+      </div>
     </div>
     <div class="col-md-3">
-      <% @product4s.each do |product4| %>
-        <%= image_tag product4.image.url, width: "260px", height: "212px" %>
-      <% end %>
-    </div>
-    <div class="head1">
-      <h><b>UP TO 45% OFF</b> HEALTH & COSMETICS</h>
+      <%# @product4s.each do |product4| %>
+        <%= image_tag @product4s.first.image.url, width: "260px", height: "212px" %>
+        <div class="head1">
+          <h><b>UP TO 45% OFF</b> <%= @product4s.first.title %></h>
+        </div>
+      <%# end %>
     </div>
     <div class="col-md-3">
-      <% @product5s.each do |product5| %>
-        <%= image_tag "int.jpg", width: "240px", height: "212px" %>
-      <% end %>
+      <%# @product5s.each do |product5| %>
+        <%= image_tag @product5s.first.image.url, width: "240px", height: "212px" %>
+      <%# end %>
     </div>
     <div class="col-md-3">
       <div class="col-md-4" style="background-color: #337b84; height: 212px; width: 316px; margin: 0px -54px; position: absolute;">
       </div>
-    </div>
-    <div class="head2">
-      <h><b>UP TO 45% OFF</b> HEALTH & COSMETICS</h>
+      <div class="head2">
+        <h><b>UP TO 45% OFF</b> <%= @product5s.first.title %></h>
+      </div>
+      <div><%= link_to @product5s.first.url, class: "boton4" do %> Go to Deal Page <% end %>
+      </div>
     </div>
   </div>
   <br><br>
