@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @latest.image %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @latest.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @latest.description %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @latest.link %>
+</p>
+
+<p>
+  <strong>Discount:</strong>
+  <%= @latest.discount %>
+</p>
+
+<%= link_to 'Edit', edit_latest_path(@latest) %> |
+<%= link_to 'Back', latests_path %>

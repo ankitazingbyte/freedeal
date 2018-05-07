@@ -10,7 +10,7 @@
         <!-- <li class="active"><a href="#">Home</a></li> -->
         <li class="brand" style="background-color: #3096f3;"><%= link_to "Home", root_path, class: "w3-bar-item w3-blue" %></li>
         <% if current_user.nil? %>
-          <li style="padding-top: 35px;"><a href="#team" class="w3-bar-item w3-button">Latest Offers</a></li>
+          <li style="padding-top: 35px;"><%= link_to latests_path, class: 'w3-bar-item w3-button' do %>Latest Offers<% end %></li>
         <% else %>
           <li style="padding-top: 35px;"><%= link_to new_deal_path, class: 'w3-bar-item w3-button' do %>DEALS<% end %></li>
         <% end %>
@@ -31,7 +31,7 @@
           <li style="padding-top: 35px;"><%= link_to new_product4_path, class: 'w3-bar-item w3-button' do %>Product4<% end %></li>
         <% end %>
         <% if current_user.nil? %>
-          <li style="padding-top: 35px;"><a href="#contact" class="w3-bar-item w3-button">CONTACT US</a></li> 
+          <li style="padding-top: 35px;"><%= link_to home_contact_path, class: 'w3-bar-item w3-button' do %>CONTACT US<% end %></li> 
         <% else %>
           <li style="padding-top: 35px;"><%= link_to new_product5_path, class: 'w3-bar-item w3-button' do %>Product5<% end %></li>
         <% end %>

@@ -31,21 +31,21 @@
 							        	<p><%= image_tag @deal.image.url, width: "350", height: "287" %></p>
 							      	</div>
 					          		<div class="ItemHeader">
-					            		<h3>
-					              			<a href="/deals/<%= @deal.id %>" class="deal_link"><%= @deal.title %></a>
-					            		</h3>
+					            		<h3><a href="/deals/<%= @deal.id %>" class="deal_link"><%= @deal.title %></a></h3>
 					          		</div>
-							        <p><%= @deal.description %><br></p>
-							        <div class="ItemBody">
-							            <p style="text-align: left;">
-							              <span>Published in:</span>
-							              <a href="/itemlist/category/67-amazon-offers">Amazon Offers</a><br>
-							              <span>Date: <%= @deal.created_at %></span><br>
-							              <span>Product Review: Good</span>
-							            </p>
-							            <p style="text-align: right;"><%= link_to @deal.link, class: "boton" do %> Go to Deal Page <% end %>
-							            </p>
-					          		</div>
+					          		<div class= "col-md-8">
+								        <p><%= @deal.description %><br></p>
+								        <div class="ItemBody">
+								            <p style="text-align: left;">
+								              <span>Published in:</span>
+								              <a href="/itemlist/category/67-amazon-offers">Amazon Offers</a><br>
+								              <span>Date: <%= @deal.created_at %></span><br>
+								              <span>Product Review: Good</span>
+								            </p>
+								            <p style="text-align: right;"><%= link_to @deal.link, class: "boton" do %> Go to Deal Page <% end %>
+								            </p>
+						          		</div>
+						          	</div>
 								</div><br>
 			                	<hr style="border-top: 1px solid #060505; border-style: dotted;"><hr />
 								<center>

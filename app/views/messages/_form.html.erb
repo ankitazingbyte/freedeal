@@ -1,0 +1,22 @@
+<%= form_for Message.new do |form| %>
+  <div class="field">
+    <lebel>Name</lebel>
+    <%= form.text_field :name, class: "form-control", placeholder: "Message" %>
+  </div>
+
+  <div class="field">
+    <lebel>Email</lebel>
+    <%= form.text_field :email, class: "form-control", placeholder: "Email" %>
+  </div>
+
+  <div class="field">
+    <lebel>Subject</lebel>
+    <%= form.text_field :subject, class: "form-control", placeholder: "Subject" %>
+  </div>
+
+  <div class="field">
+    <lebel>Message</lebel>
+    <%= form.text_field :message, class: "form-control", placeholder: "Message" %>
+  </div><br>
+    <%= form.submit "Send Message", class: "btn btn-success" %>
+<% end %>

@@ -1,4 +1,4 @@
-class Deal < ApplicationRecord
+class Latest < ApplicationRecord
 	mount_uploader :image, ImageUploader
 	def self.search(search)
 	  	if search

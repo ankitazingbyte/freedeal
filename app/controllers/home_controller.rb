@@ -9,4 +9,7 @@ class HomeController < ApplicationController
     @product4s = Product4.all
     @product5s = Product5.all
   end
+  def contact
+    @contacts = Contact.all
+  end 
 end
