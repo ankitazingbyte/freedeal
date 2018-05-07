@@ -15,7 +15,7 @@ class Admin::AdminController < ApplicationController
 
  	 def after_sign_in_path_for(user)
 	    if user.has_role? :admin
-	      dashboard_path
+	     	home_index_path
 	    else
 	      user_root_path
 	    end

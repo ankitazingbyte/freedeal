@@ -10,7 +10,7 @@
         <!-- <li class="active"><a href="#">Home</a></li> -->
         <li class="brand" style="background-color: #3096f3;"><%= link_to "Home", root_path, class: "w3-bar-item w3-blue" %></li>
         <% if current_user.nil? %>
-          <li style="padding-top: 35px;"><a href="#team" class="w3-bar-item w3-button">BLOGS</a></li>
+          <li style="padding-top: 35px;"><a href="#team" class="w3-bar-item w3-button">Latest Offers</a></li>
         <% else %>
           <li style="padding-top: 35px;"><%= link_to new_deal_path, class: 'w3-bar-item w3-button' do %>DEALS<% end %></li>
         <% end %>
@@ -21,12 +21,12 @@
           <li style="padding-top: 35px;"><%= link_to new_product2_path, class: 'w3-bar-item w3-button' do %>Product2<% end %></li>
         <% end %>
         <% if current_user.nil? %>
-          <li style="padding-top: 35px;"><a href="#work" class="w3-bar-item w3-button">NEWS</a></li>
+          <li style="padding-top: 35px;"><a href="#work" class="w3-bar-item w3-button">Free Offers</a></li>
         <% else %>
           <li style="padding-top: 35px;"><%= link_to new_product3_path, class: 'w3-bar-item w3-button' do %>Product3<% end %></li>
         <% end %>
         <% if current_user.nil? %>
-          <li style="padding-top: 35px;"><a href="#pricing" class="w3-bar-item w3-button">DISCLAIMER</a></li> 
+          <li style="padding-top: 35px;"><a href="#pricing" class="w3-bar-item w3-button">Discount Coupons</a></li> 
         <% else %>
           <li style="padding-top: 35px;"><%= link_to new_product4_path, class: 'w3-bar-item w3-button' do %>Product4<% end %></li>
         <% end %>

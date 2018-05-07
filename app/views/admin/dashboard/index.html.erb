@@ -10,18 +10,34 @@
         </ol>
 
         <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item active img">
-            <% @products.each do |product| %>
-              <%= image_tag product.image.url, class: "img"%>
-              <div class="carousel-caption">
-                <h1><%= product.title %></h1>
-                <h3>Welcome To GETFREEDEALS</h3>
-                <%= link_to product.url, class: "boton2" do %> Go to Deal Page <% end %>
-              </div>
-            <% end %>
+        <div class="carousel-inner">
+          <div class="item active img"> 
+            <%= image_tag "deal_01.jpg",class: "img" %>
+            <div class="carousel-caption">
+              <h1>BIG SALE ON SMART PHONES</h1>
+              <h3>Welcome To GETFREEDEALS</h3>
+              <a href="custom-hats.html" class="btn btn boton2">Go to Deal Page</a>
             </div>
           </div>
+
+          <div class="item img">
+            <%= image_tag "int.jpg",class: "img" %>
+            <div class="carousel-caption">
+              <h1>BIG SALE ON SMART PHONES</h1>
+              <h3>Welcome To GETFREEDEALS</h3>
+              <a href="custom-hats.html" class="btn btn boton2">Go to Deal Page</a>
+            </div>
+          </div>
+
+          <div class="item img">
+            <%= image_tag "sunset.jpg",class: "img" %>
+            <div class="carousel-caption">
+              <h1>BIG SALE ON SMART PHONES</h1>
+              <h3>Welcome To GETFREEDEALS</h3>
+              <a href="custom-hats.html" class="btn btn boton2">Go to Deal Page</a>
+            </div>
+          </div>
+        </div>
 
         <!-- Left and right controls -->
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -47,17 +63,17 @@
         <div class="col-md-4" style="background-color: #060606; height: 257px; width: 367px;">
         </div>    
         <div class="col-md-8">
-          <% @product3s.each do |product3| %>
-            <%= image_tag product3.image.url, width: "750px", height: "258px" %>
-          <% end %>
+          <%# @product3s.each do |product3| %>
+            <%= image_tag @product3s.first.image.url, width: "750px", height: "258px" %>
+          <%# end %>
         </div>
         <div class="transbox">
-          <h><b>UP TO 45% OFF</b> HEALTH & COSMETICS<%#= product3.title %></h>
+          <h><b>UP TO 45% OFF</b> <%= @product3s.first.title %></h>
         </div>
     </div>
   </div><br>
   <div class="col-md-12">
-     <!--  <form action="/action_page.php">
+      <!-- <form action="/action_page.php">
         <div class="input-group">
           <input type="text" class="form-control" placeholder="Search" name="search">
           <div class="input-group-btn">
@@ -65,10 +81,10 @@
           </div>
         </div>
       </form> -->
-    <%= form_tag deals_path, :method => 'get' do %>
-      <%= text_field_tag :search, params[:search], class: "search" %>
-      <%= submit_tag "Search", :name => nil, class: "btn btn-default" %>
-    <% end %>
+      <%= form_tag deals_path, :method => 'get' do %>
+        <%= text_field_tag :search, params[:search], class: "search" %>
+        <%= submit_tag "Search", :name => nil, class: "btn btn-default" %>
+      <% end %>
   </div>
   <div class="row">
     <div class="col-md-12">
@@ -186,26 +202,30 @@
     <div class="col-md-3">
       <div class="col-md-4" style="background-color: #eeeef0; height: 212px; width: 367px; position: absolute;">
       </div>
+      <div><%= link_to @product5s.first.url, class: "boton3" do %> Go to Deal Page <% end %>
+      </div>
     </div>
     <div class="col-md-3">
-      <% @product4s.each do |product4| %>
-        <%= image_tag product4.image.url, width: "260px", height: "212px" %>
-      <% end %>
-    </div>
-    <div class="head1">
-      <h><b>UP TO 45% OFF</b> HEALTH & COSMETICS</h>
+      <%# @product4s.each do |product4| %>
+        <%= image_tag @product4s.first.image.url, width: "260px", height: "212px" %>
+        <div class="head1">
+          <h><b>UP TO 45% OFF</b> <%= @product4s.first.title %></h>
+        </div>
+      <%# end %>
     </div>
     <div class="col-md-3">
-      <% @product5s.each do |product5| %>
-        <%= image_tag "int.jpg", width: "240px", height: "212px" %>
-      <% end %>
+      <%# @product5s.each do |product5| %>
+        <%= image_tag @product5s.first.image.url, width: "240px", height: "212px" %>
+      <%# end %>
     </div>
     <div class="col-md-3">
       <div class="col-md-4" style="background-color: #337b84; height: 212px; width: 316px; margin: 0px -54px; position: absolute;">
       </div>
-    </div>
-    <div class="head2">
-      <h><b>UP TO 45% OFF</b> HEALTH & COSMETICS</h>
+      <div class="head2">
+        <h><b>UP TO 45% OFF</b> <%= @product5s.first.title %></h>
+      </div>
+      <div><%= link_to @product5s.first.url, class: "boton4" do %> Go to Deal Page <% end %>
+      </div>
     </div>
   </div>
   <br><br>

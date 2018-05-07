@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   	namespace :admin do
 	    get 'dashboard/index'
 	    root 'dashboard#index'
+      # root 'home#index'
 	end
 end
