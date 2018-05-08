@@ -65,4 +65,4 @@ gem 'carrierwave'
 gem "font-awesome-rails"
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
-gem "rolify"
+gem 'geocoder'

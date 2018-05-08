@@ -1,5 +1,4 @@
 <div class="container">
- 
   <br><br><br><br>
   <div class="row">
     <div class="col-md-12">
@@ -14,7 +13,7 @@
     </div>
   </div><br>
   <div class="col-md-12">
-    <%= form_tag deals_path, :method => 'get' do %>
+    <%= form_tag deals_path,class: "example",style: "margin:auto;max-width:300px", :method => 'get' do %>
       <%= text_field_tag :search, params[:search], class: "search" %>
       <%= submit_tag "Search", :name => nil, class: "btn btn-default" %>
     <% end %>
@@ -128,7 +127,7 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-      <center><%= will_paginate @deals, renderer: BootstrapPagination::Rails %></center>
+      <center><%#= will_paginate @deals %></center>
     </div>
   </div>
   <div class="row">

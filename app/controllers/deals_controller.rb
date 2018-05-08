@@ -5,8 +5,11 @@ class DealsController < ApplicationController
   # GET /deals.json
   def index
     @deals = Deal.all
-    @deals = Deal.paginate(page: params[:page], per_page: 3)
-    @deals = Deal.search(params[:search]) if params[:search].present?
+    if params[:search]
+      @deals = Deal.search(params[:search])
+    else
+      @deals = Deal.search(params[:search]) if params[:search].present?
+    end
   end
 
   # GET /deals/1

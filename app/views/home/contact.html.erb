@@ -4,8 +4,7 @@
     <div class= "col-md-6">  
       <h1>Contact Informations</h1> 
         <% @contacts.each do |contact| %>
-          <p><div class= "col-md-2"><%= image_tag "address_logo.jpeg", width: "40px" %></div>
-         Address<br><%= contact.address %></p><br>
+          <p><div class= "col-md-2"><%= image_tag "address_logo.jpeg", width: "40px" %></div>Address<br><%= contact.address %></p><br>
           <p><div class= "col-md-2"><%= image_tag "email_logo.png", width: "40px" %></div>Email<br><%= contact.email %></p><br>
           <p><div class= "col-md-2"><%= image_tag "phone.jpeg", width: "40px" %></div>Phone<br><%= contact.phone %></p>
         <% end %>

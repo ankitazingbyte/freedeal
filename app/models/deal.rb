@@ -7,4 +7,5 @@ class Deal < ApplicationRecord
     		self.all
 	  	end
 	end
+	 WillPaginate.per_page = 10
 end

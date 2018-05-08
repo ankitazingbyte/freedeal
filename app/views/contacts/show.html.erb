@@ -14,6 +14,35 @@
   <strong>Phone:</strong>
   <%= @contact.phone %>
 </p>
+<p>
+  <strong>Latitude:</strong>
+  <%= @contact.latitude %>
+</p>
+<p>
+  <strong>Longitude:</strong>
+  <%= @contact.longitude %>
+</p>
 
 <%= link_to 'Edit', edit_contact_path(@contact) %> |
 <%= link_to 'Back', contacts_path %>
+  <%= link_to "Destroy", @contact, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", contacts_path %>
+
+<ul>
+<%# for contact in @contact.nearbys(10) %>
+  <li><%#= link_to contact.address, contact %> (<%#= contact.distance.round(2) %> miles)</li>
+<%# end %>
+</ul><%# title "Location" %>
+<%#= form_tag contacts_path, :method => :get do %>
+    <%#= text_field_tag :search, params[:search] %>
+    <%#= submit_tag "Search Near", :name => nil %>
+<%# end %>
+
+<h3>Nearby Locations</h3>
+<ul>
+<%# for @contact in @contact.nearbys(10) %>
+  <li><%#= link_to contact.address, contact %> (<%#= contact.distance.round(2) %> miles)</li>
+<%# end %>
+</ul>
+
+<%#= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@contact.latitude}%2C#{@contact.longitude}" %>
