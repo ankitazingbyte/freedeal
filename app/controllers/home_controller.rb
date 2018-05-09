@@ -11,5 +11,6 @@ class HomeController < ApplicationController
   end
   def contact
     @contacts = Contact.all
+    @message = Message.new
   end 
 end
