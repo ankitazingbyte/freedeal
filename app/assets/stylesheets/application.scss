@@ -175,11 +175,6 @@
   margin: 11px -95px;
   position: absolute;
 }
-
-.search{
-  width: 62%;
-  height: 39px;
-}
 .card {
   background: #fffcfc;
   border-radius: 2px;
@@ -194,32 +189,44 @@
 }
 
 .example input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: 80%;
-    background: #f1f1f1;
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
 }
 
 .example button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #2196F3;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
-    cursor: pointer;
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
 }
 
 .example button:hover {
-    background: #0b7dda;
+  background: #0b7dda;
 }
 
 .example::after {
-    content: "";
-    clear: both;
-    display: table;
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.glyphicon-search{
+  margin: -41px 750px ;
+  width: 4%;
+  height: 39px;
+}
+
+.search{
+  width: 50%;
+  height: 40px;
+  margin: 0px 35px;
 }
