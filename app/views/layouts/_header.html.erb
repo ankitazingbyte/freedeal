@@ -26,7 +26,7 @@
           <li style="padding-top: 35px;"><%= link_to new_product3_path, class: 'w3-bar-item w3-button' do %>Product3<% end %></li>
         <% end %>
         <% if current_user.nil? %>
-          <li style="padding-top: 35px;"><a href="#pricing" class="w3-bar-item w3-button">Discount Coupons</a></li> 
+          <li style="padding-top: 35px;"><%= link_to coupens_path, class: 'w3-bar-item w3-button' do %>Discount Coupons<% end %></li> 
         <% else %>
           <li style="padding-top: 35px;"><%= link_to new_product4_path, class: 'w3-bar-item w3-button' do %>Product4<% end %></li>
         <% end %>
@@ -35,6 +35,9 @@
         <% else %>
           <li style="padding-top: 35px;"><%= link_to new_product5_path, class: 'w3-bar-item w3-button' do %>Product5<% end %></li>
         <% end %>
+        <% if user_signed_in? %>
+          <li style="padding-top: 35px;"><%= link_to new_contact_path, class: 'w3-bar-item w3-button' do %>CONTACT US<% end %></li> 
+         <% end %>
         <% if user_signed_in? %>
           <li style="padding-top: 35px;">
             <% if current_user.nil? %>

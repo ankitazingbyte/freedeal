@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @coupen.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @coupen.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @coupen.image %>
+</p>
+
+<p>
+  <strong>Coupen:</strong>
+  <%= @coupen.coupen %>
+</p>
+
+<%= link_to 'Edit', edit_coupen_path(@coupen) %> |
+<%= link_to 'Back', coupens_path %>
