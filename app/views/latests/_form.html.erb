@@ -11,29 +11,29 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :image %>
-    <%= form.file_field :image, id: :latest_image %>
+    <%= form.file_field :image %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title, id: :latest_title %>
+    <%= form.text_field :title, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_field :description, id: :latest_description %>
+    <%= form.text_field :description, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :link %>
-    <%= form.text_field :link, id: :latest_link %>
+    <%= form.text_field :link, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :discount %>
-    <%= form.text_field :discount, id: :latest_discount %>
+    <%= form.text_field :discount, class: "form-control" %>
   </div>
 
   <div class="actions">

@@ -1,6 +1,26 @@
 <nav class="navbar">
   <div class="container">
     <div class= "row">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <%= link_to new_deal_path, class: 'w3-bar-item w3-button' do %>DEALS<% end %>
+        
+          <%= link_to new_product_path, class: 'w3-bar-item w3-button' do %>Product1<% end %>
+        
+          <%= link_to new_product2_path, class: 'w3-bar-item w3-button' do %>Product2<% end %>
+      
+          <%= link_to new_product3_path, class: 'w3-bar-item w3-button' do %>Product3<% end %>
+        
+          <%= link_to new_product4_path, class: 'w3-bar-item w3-button' do %>Product4<% end %>
+          
+          <%= link_to new_product5_path, class: 'w3-bar-item w3-button' do %>Product5<% end %>
+          
+          <%= link_to new_coupen_path, class: 'w3-bar-item w3-button' do %>Coupons<% end %> 
+        
+          <%= link_to new_latest_path, class: 'w3-bar-item w3-button' do %>Latest Offers<% end %>
+       
+          <%= link_to new_contact_path, class: 'w3-bar-item w3-button' do %>CONTACT US<% end %>
+      </div>
       <div class="navbar-header">
         <div class="navbar-brand" style="padding: 4px 30px;">
           <%= image_tag "logo1.png", width: "204px", height: "80px" %>
@@ -8,55 +28,44 @@
       </div>
       <ul class="nav navbar-nav pull-right" style="font-size: 19px; margin: 0px;">
         <!-- <li class="active"><a href="#">Home</a></li> -->
-        <li class="brand" style="background-color: #3096f3;"><%= link_to "Home", root_path, class: "w3-bar-item w3-blue" %></li>
+        <% if user_signed_in? %>
+          <li style="padding-top: 35px;"><div id="main"><span style="font-size:30px; cursor:pointer;" onclick="openNav()">&#9776; OPEN</span></div></li>
+        <% end %>
+          <li class="brand" style="background-color: #3096f3;"><%= link_to "Home", root_path, class: "w3-bar-item w3-blue" %></li>
         <% if current_user.nil? %>
           <li style="padding-top: 35px;"><%= link_to latests_path, class: 'w3-bar-item w3-button' do %>Latest Offers<% end %></li>
-        <% else %>
-          <li style="padding-top: 35px;"><%= link_to new_deal_path, class: 'w3-bar-item w3-button' do %>DEALS<% end %></li>
-        <% end %>
-        <% if user_signed_in? %>
-          <li style="padding-top: 35px;"><%= link_to new_product_path, class: 'w3-bar-item w3-button' do %>Product1<% end %></li>
-        <% end %>
-        <% if user_signed_in? %>
-          <li style="padding-top: 35px;"><%= link_to new_product2_path, class: 'w3-bar-item w3-button' do %>Product2<% end %></li>
         <% end %>
         <% if current_user.nil? %>
           <li style="padding-top: 35px;"><a href="#work" class="w3-bar-item w3-button">Free Offers</a></li>
-        <% else %>
-          <li style="padding-top: 35px;"><%= link_to new_product3_path, class: 'w3-bar-item w3-button' do %>Product3<% end %></li>
         <% end %>
         <% if current_user.nil? %>
-          <li style="padding-top: 35px;"><%= link_to coupens_path, class: 'w3-bar-item w3-button' do %>Discount Coupons<% end %></li> 
-        <% else %>
-          <li style="padding-top: 35px;"><%= link_to new_product4_path, class: 'w3-bar-item w3-button' do %>Product4<% end %></li>
+          <li style="padding-top: 35px;"><%= link_to coupens_path, class: 'w3-bar-item w3-button' do %>Discount Coupons<% end %></li>
         <% end %>
         <% if current_user.nil? %>
-          <li style="padding-top: 35px;"><%= link_to home_contact_path, class: 'w3-bar-item w3-button' do %>CONTACT US<% end %></li> 
-        <% else %>
-          <li style="padding-top: 35px;"><%= link_to new_product5_path, class: 'w3-bar-item w3-button' do %>Product5<% end %></li>
+        <li style="padding-top: 35px;"><%= link_to home_contact_path, class: 'w3-bar-item w3-button' do %>CONTACT US<% end %></li>
         <% end %>
         <% if user_signed_in? %>
-          <li style="padding-top: 35px;"><%= link_to new_contact_path, class: 'w3-bar-item w3-button' do %>CONTACT US<% end %></li> 
-         <% end %>
-        <% if user_signed_in? %>
-          <li style="padding-top: 35px;">
             <% if current_user.nil? %>
-              <%= link_to new_user_session_path, class: 'w3-bar-item w3-button' do %>SING IN<% end %>
+              <li style="padding-top: 35px;"><%= link_to new_user_session_path, class: 'w3-bar-item w3-button' do %>SING IN<% end %></li>
             <% else %>
-              <%= link_to destroy_user_session_path,class: 'w3-bar-item w3-button', method: :delete do %>LOG OUT<i class="fa fa-power-off"></i><% end %>
+              <li style="padding-top: 35px;"><%= link_to destroy_user_session_path,class: 'w3-bar-item w3-button', method: :delete do %>LOG OUT<i class="fa fa-power-off"></i><% end %></li>
             <% end %>
-          </li>
         <% end %>
       </ul>
     </div>
   </div>
 </nav><br>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
 
-
-
-
-
-
- 
-
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+</script>
 

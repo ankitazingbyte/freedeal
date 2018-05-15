@@ -1,6 +1,8 @@
-<h1>Editing Latest</h1>
-
-<%= render 'form', latest: @latest %>
-
-<%= link_to 'Show', @latest %> |
-<%= link_to 'Back', latests_path %>
+<div class="container">
+	<div class="panel panel-info">
+	    <div class="panel-heading"><h1><center>Create a product</center></h1></div>
+		<div class="panel-body"><%= render 'form', latest: @latest %></div>
+		<div class="panel-footer"><%= link_to 'Back', latests_path, class: "btn btn-default" %></div>
+	</div>
+</div>
+	

@@ -1,6 +1,7 @@
-<h1>Editing Coupen</h1>
-
-<%= render 'form', coupen: @coupen %>
-
-<%= link_to 'Show', @coupen %> |
-<%= link_to 'Back', coupens_path %>
+<div class="container">
+	<div class="panel panel-info">
+	    <div class="panel-heading"><h1><center>Edit Coupon</center></h1></div>
+		<div class="panel-body"><%= render 'form', coupen: @coupen %></div>
+		<div class="panel-footer"><%= link_to 'Back', coupens_path %></div>
+	</div>
+</div>
