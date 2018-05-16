@@ -1,24 +1,5 @@
 <div class="container">
-  <br><br><br><br>
-  <div class="row">
-    <div class="col-md-12">
-      <div class="col-md-4" style="background-color: #060606; height: 257px; width: 367px;">
-      </div>    
-      <div class="col-md-8">
-        <%= image_tag "beauty_makeup.jpg", width: "750px", height: "258px" %>
-      </div>
-      <div class="transbox">
-        <h><b>UP TO 45% OFF</b> HEALTH & COSMETICS</h>
-      </div>
-    </div>
-  </div><br>
-  <div class="col-md-12">
-    <%= form_tag deals_path,class: "example",style: "margin:auto;max-width:300px", :method => 'get' do %>
-      <%= text_field_tag :search, params[:search], class: "search" %>
-      <%= submit_tag "Search", :name => nil, class: "btn btn-default" %>
-    <% end %>
-  </div>
-  <div class="row">
+   <div class="row">
     <div class="col-md-12">
       <div class = "panel">
         <!-- Advertise -->
@@ -47,7 +28,7 @@
             <% @deals.each do |deal| %>
               <div class="row">
                 <div class="panel panel-default">
-                  <div class="pull-left">
+                  <div class="pull-left col-md-4">
                     <p><%= image_tag deal.image.url, width: "350", height: "287" %></p>
                   </div>
                   <div class="panel-body">
@@ -70,7 +51,7 @@
                       </div>
                     </div>
                     <div class="circle">
-                      <p>GET <b><%= deal.discount %>%</b> OFF</p>
+                      <p>GET <b><%= deal.discount %>%</b>OFF</p>
                     </div>
                   </div>
                 </div>
@@ -128,28 +109,6 @@
   <div class="row">
     <div class="col-md-12">
       <center><%#= will_paginate @deals %></center>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-3">
-      <div class="col-md-4" style="background-color: #eeeef0; height: 212px; width: 367px; position: absolute;">
-      </div>
-    </div>
-    <div class="col-md-3">
-      <%= image_tag "image.jpg", width: "260px", height: "212px" %>
-    </div>
-    <div class="head1">
-      <h><b>UP TO 45% OFF</b> HEALTH & COSMETICS</h>
-    </div>
-    <div class="col-md-3">
-      <%= image_tag "int.jpg", width: "240px", height: "212px" %>
-    </div>
-    <div class="col-md-3">
-      <div class="col-md-4" style="background-color: #337b84; height: 212px; width: 316px; margin: 0px -54px; position: absolute;">
-      </div>
-    </div>
-    <div class="head2">
-      <h><b>UP TO 45% OFF</b> HEALTH & COSMETICS</h>
     </div>
   </div>
   <br><br>

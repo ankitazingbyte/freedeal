@@ -5,6 +5,7 @@ class CoupensController < ApplicationController
   # GET /coupens.json
   def index
     @coupens = Coupen.all
+    @coupens = Coupen.paginate(page: params[:page], per_page: 8)
   end
 
   # GET /coupens/1
@@ -69,6 +70,6 @@ class CoupensController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def coupen_params
-      params.require(:coupen).permit(:title, :description, :image, :coupen)
+      params.require(:coupen).permit(:title, :description, :image, :coupen, :url)
     end
 end
