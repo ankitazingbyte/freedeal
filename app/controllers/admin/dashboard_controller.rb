@@ -1,7 +1,7 @@
 class Admin::DashboardController < Admin::AdminController
 	def index
     	@deals = Deal.all
-        @deals = Deal.paginate(page: params[:page], per_page: 3)
+        @deals = Deal.paginate(page: params[:page], per_page: 10)
         @deals = Deal.search(params[:search]) if params[:search].present?
         @products = Product.all
         @product2s = Product2.all
