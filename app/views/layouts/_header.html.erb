@@ -8,7 +8,7 @@
               <button class="w3-button">DEALS
                 <i class="fa fa-caret-down"></i>
               </button>
-              <div class="w3-dropdown-content w3-bar-block">
+              <div class="w3-dropdown-content block">
                 <%= link_to new_deal_path, class: 'w3-bar-item w3-button' do %> new deal<% end %>
                 <%= link_to deals_path, class: 'w3-bar-item w3-button' do %>Deals<% end %>
               </div>
@@ -17,7 +17,7 @@
               <button class="w3-button">product1
                 <i class="fa fa-caret-down"></i>
               </button>
-              <div class="w3-dropdown-content w3-bar-block">
+              <div class="w3-dropdown-content block">
                 <%= link_to new_product_path, class: 'w3-bar-item w3-button' do %>new product<% end %>
                 <%= link_to products_path, class: 'w3-bar-item w3-button' do %> Products<% end %>
               </div>
@@ -26,7 +26,7 @@
               <button class="w3-button">product2
                 <i class="fa fa-caret-down"></i>
               </button>
-              <div class="w3-dropdown-content w3-bar-block">
+              <div class="w3-dropdown-content block">
                 <%= link_to new_product2_path, class: 'w3-bar-item w3-button' do %> new product2<% end %>
                 <%= link_to product2s_path, class: 'w3-bar-item w3-button' do %>Product2s<% end %>
               </div>
@@ -35,7 +35,7 @@
               <button class="w3-button">product3
                 <i class="fa fa-caret-down"></i>
               </button>
-              <div class="w3-dropdown-content w3-bar-block">
+              <div class="w3-dropdown-content block">
                 <%= link_to new_product3_path, class: 'w3-bar-item w3-button' do %>new Product3<% end %>
                 <%= link_to product3s_path, class: 'w3-bar-item w3-button' do %>Product3<% end %>
               </div>
@@ -44,7 +44,7 @@
               <button class="w3-button">product4
                 <i class="fa fa-caret-down"></i>
               </button>
-              <div class="w3-dropdown-content w3-bar-block">
+              <div class="w3-dropdown-content block">
                 <%= link_to new_product4_path, class: 'w3-bar-item w3-button' do %>new Product4<% end %>
                 <%= link_to product4s_path, class: 'w3-bar-item w3-button' do %>Product4<% end %>
               </div>
@@ -53,7 +53,7 @@
               <button class="w3-button">product5
                 <i class="fa fa-caret-down"></i>
               </button>
-              <div class="w3-dropdown-content w3-bar-block">
+              <div class="w3-dropdown-content block">
                 <%= link_to new_product5_path, class: 'w3-bar-item w3-button' do %>new Product5<% end %>
                 <%= link_to product5s_path, class: 'w3-bar-item w3-button' do %>Product5<% end %>
               </div>
@@ -62,25 +62,25 @@
               <button class="w3-button">Coupon
                 <i class="fa fa-caret-down"></i>
               </button>
-              <div class="w3-dropdown-content w3-bar-block">
-                <%= link_to new_coupen_path, class: 'w3-bar-item w3-button' do %>new Coupon<% end %>
-                <%= link_to coupens_path, class: 'w3-bar-item w3-button' do %> coupons<% end %>
+              <div class="w3-dropdown-content block">
+                <%= link_to new_coupen_path, class: 'w3-button' do %>new Coupon<% end %>
+                <%= link_to coupens_path, class: 'w3-button' do %>Coupons<% end %>
               </div>
             </div><br>
             <div class="w3-dropdown-hover">
               <button class="w3-button">Latest Offers
                 <i class="fa fa-caret-down"></i>
               </button>
-              <div class="w3-dropdown-content w3-bar-block">
-                <%= link_to new_latest_path, class: 'w3-bar-item w3-button' do %>new offer<% end %>
-                <%= link_to latests_path, class: 'w3-bar-item w3-button' do %> Offers<% end %>
+              <div class="w3-dropdown-content block">
+                <%= link_to new_latest_path, class: 'w3-button' do %>new offer<% end %>
+                <%= link_to latests_path, class: 'w3-button' do %> Offers<% end %>
               </div>
             </div><br>
             <div class="w3-dropdown-hover">
               <button class="w3-button">Contact Us
                 <i class="fa fa-caret-down"></i>
               </button>
-              <div class="w3-dropdown-content w3-bar-block">
+              <div class="w3-dropdown-content block">
                 <%= link_to new_contact_path, class: 'w3-bar-item w3-button' do %>Add Contact<% end %>
                 <%= link_to contacts_path, class: 'w3-bar-item w3-button' do %>Contact Us<% end %>
               </div>
@@ -122,16 +122,16 @@
   </div>
 </nav><br>
 <script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-}
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-    document.body.style.backgroundColor = "white";
-}
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+      document.body.style.backgroundColor = "white";
+  }
 </script>
 
