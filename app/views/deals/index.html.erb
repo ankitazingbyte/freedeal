@@ -47,6 +47,9 @@
                           <span>Product Review: Good</span>
                         </p>
                         <p style="text-align: right;"><%= link_to deal.link, class: "boton" do %> Go to Deal Page <% end %>
+                          <td><%= link_to 'Show', deal %></td>
+        <td><%= link_to 'Edit', edit_deal_path(deal) %></td>
+        <td><%= link_to 'Destroy', deal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
                         </p>
                       </div>
                     </div>
