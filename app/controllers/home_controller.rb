@@ -15,5 +15,6 @@ class HomeController < ApplicationController
   end 
   def coupon
     @coupens = Coupen.all
+    @coupens = Coupen.paginate(page: params[:page], per_page: 8)
   end
 end
