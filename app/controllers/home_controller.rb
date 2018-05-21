@@ -14,6 +14,6 @@ class HomeController < ApplicationController
     @message = Message.new
   end 
   def coupon
-    @coupen = Coupen.all
+    @coupens = Coupen.all
   end
 end
