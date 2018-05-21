@@ -105,7 +105,7 @@
           <li style="padding-top: 35px;"><a href="#work" class="w3-bar-item w3-button">Free Offers</a></li>
         <% end %>
         <% if current_user.nil? %>
-          <li style="padding-top: 35px;"><%= link_to home_coupen_path, class: 'w3-bar-item w3-button' do %>Discount Coupons<% end %></li>
+          <li style="padding-top: 35px;"><%= link_to home_coupon_path, class: 'w3-bar-item w3-button' do %>Discount Coupons<% end %></li>
         <% end %>
         <% if current_user.nil? %>
         <li style="padding-top: 35px;"><%= link_to home_contact_path, class: 'w3-bar-item w3-button' do %>CONTACT US<% end %></li>

@@ -13,7 +13,7 @@ class HomeController < ApplicationController
     @contacts = Contact.all
     @message = Message.new
   end 
-  def contact
+  def coupon
     @coupen = Coupen.all
   end
 end
