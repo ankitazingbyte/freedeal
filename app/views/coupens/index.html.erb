@@ -19,6 +19,9 @@
                   <%= link_to coupen.url do %><%= coupen.title %><% end %>
                 </div>
                 <div class="Categories"><p></p></div>
+                <%= link_to 'Show', coupen %>
+                <%= link_to 'Edit', edit_coupen_path(coupen) %>
+                <%= link_to 'Destroy', coupen, method: :delete, data: { confirm: 'Are you sure?' } %>
               </div>
               <div class="prices"></div>
               <div class="in-center">
@@ -38,9 +41,6 @@
                 <% end %>
               </div>
         </div> 
-        <%= link_to 'Show', coupen %>
-        <%= link_to 'Edit', edit_coupen_path(coupen) %>
-        <%= link_to 'Destroy', coupen, method: :delete, data: { confirm: 'Are you sure?' } %>
         <% end %><br> 
         </div><!-- /.row -->
       
