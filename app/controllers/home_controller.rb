@@ -17,4 +17,9 @@ class HomeController < ApplicationController
     @coupens = Coupen.all
     @coupens = Coupen.paginate(page: params[:page], per_page: 8)
   end
+  def latest_offer
+    @latests = Latest.all
+    @latests = Latest.paginate(page: params[:page], per_page: 8)
+    @latests = Latest.search(params[:search]) if params[:search].present?
+  end
 end

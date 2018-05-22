@@ -1,0 +1,118 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class = "panel">
+        <!-- Advertise -->
+        <!-- <div id="ja-slideshow" class="wrap "> -->
+          <!-- <div class="main clearfix"> -->
+            <!-- <div class="bannergroup"> -->
+              <!-- <div class="banneritem"> -->
+                <!-- <script type="text/javascript"> -->
+                  <!-- google_ad_client = "ca-pub-7698440629108864"; -->
+                  <!-- /* widest */ -->
+                  <!-- google_ad_slot = "7401308193"; -->
+                  <!-- google_ad_width = 970; -->
+                  <!-- google_ad_height = 90; -->
+                <!-- </script>
+                <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                </script> <div class="clr"></div> -->
+              <!-- </div>
+            </div>
+          </div>
+        </div> -->
+          <!-- Advertise End -->
+        <div class = "panel-body">
+          <!--list start============================== -->
+          <!-- <div class="col-md-12"> -->
+          <div class="itemList">
+            <% @latests.each do |latest| %>
+              <div class="row">
+                <div class="panel panel-default">
+                  <div class="pull-left">
+                    <p><%= image_tag latest.image.url, width: "350", height: "287" %></p>
+                  </div>
+                  <div class="panel-body">
+                    <div class="col-md-8">
+                      <div class="ItemHeader">
+                        <h3>
+                          <a href="/latests/<%= latest.id %>" class="deal_link"><%= latest.title %></a>
+                        </h3>
+                      </div>
+                      <p><%= latest.description %><br></p>
+                      <div class="ItemBody">
+                        <p style="text-align: left;">
+                          <span>Published in:</span>
+                          <a href="/itemlist/category/67-amazon-offers">Amazon Offers</a><br>
+                          <span>Date: <%= latest.created_at %></span><br>
+                          <span>Product Review: Good</span>
+                        </p>
+                        <p style="text-align: right;"><%= link_to latest.link, class: "boton" do %> Go to Deal Page <% end %>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="circle">
+                      <p>GET <b><%= latest.discount %>%</b> OFF</p>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+            <% end %>
+          </div>
+         <!--  </div> -->
+          <!-- Advertise -->
+         <!--  <div class="col-md-4">
+            <div class="clr"></div>
+              <div id="ja-inset2" class="ja-col column ja-inset2" style="width:36%">
+                <div class="ja-moduletable moduletable  clearfix" id="Mod127">
+                  <div class="ja-box-ct clearfix">
+                    <div class="bannergroup">
+                      <div class="banneritem">
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-7698440629108864" data-ad-slot="6371016993"></ins>
+                        <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script> <div class="clr">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ja-moduletable moduletable  clearfix" id="Mod133">
+                <div class="ja-box-ct clearfix">
+                  <div class="bannergroup">
+                    <div class="banneritem">
+                      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-7698440629108864" data-ad-slot="4754682990"></ins>
+                      <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                      </script> <div class="clr"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="ja-botsl" class="wrap ">
+                <div class="main">
+                  <div class="main-inner1 clearfix">
+                    <script type="text/javascript">
+                        window.addEvent('load', function (){ equalHeight ('#ja-botsl .ja-box') });
+                    </script> 
+                  </div>
+                </div>
+              </div>
+          </div> -->
+          <!-- Advertise End -->
+        <!-- </div> --><!-- .container close -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <center><%= will_paginate @latests, renderer: BootstrapPagination::Rails %></center>
+    </div>
+  </div>
+  <br><br>
+</div>
+
+
+ 

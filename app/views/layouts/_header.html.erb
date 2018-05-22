@@ -99,7 +99,7 @@
         <% end %>
           <li class="brand" style="background-color: #3096f3;"><%= link_to "Home", root_path, class: "w3-bar-item w3-blue" %></li>
         <% if current_user.nil? %>
-          <li style="padding-top: 35px;"><%= link_to latests_path, class: 'w3-bar-item w3-button' do %>Latest Offers<% end %></li>
+          <li style="padding-top: 35px;"><%= link_to home_latest_offer_path, class: 'w3-bar-item w3-button' do %>Latest Offers<% end %></li>
         <% end %>
         <% if current_user.nil? %>
           <li style="padding-top: 35px;"><a href="#work" class="w3-bar-item w3-button">Free Offers</a></li>

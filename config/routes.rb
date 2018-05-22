@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   	root 'home#index'
     get 'home/contact'
     get 'home/coupon'
+    get 'home/latest_offer'
   	# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   	namespace :admin do
 	    get 'dashboard/index'

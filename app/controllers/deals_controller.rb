@@ -1,4 +1,5 @@
 class DealsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy, :index], raise: false
   before_action :set_deal, only: [:show, :edit, :update, :destroy]
 
   # GET /deals

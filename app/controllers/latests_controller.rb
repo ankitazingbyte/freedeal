@@ -1,4 +1,5 @@
 class LatestsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy, :index]
   before_action :set_latest, only: [:show, :edit, :update, :destroy]
 
   # GET /latests
@@ -27,7 +28,6 @@ class LatestsController < ApplicationController
   # POST /latests.json
   def create
     @latest = Latest.new(latest_params)
-
     respond_to do |format|
       if @latest.save
         format.html { redirect_to @latest, notice: 'Latest was successfully created.' }

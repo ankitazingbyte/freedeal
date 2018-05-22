@@ -1,4 +1,5 @@
 class CoupensController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy, :index], raise: false
   before_action :set_coupen, only: [:show, :edit, :update, :destroy]
 
   # GET /coupens

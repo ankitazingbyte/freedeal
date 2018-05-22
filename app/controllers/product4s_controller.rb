@@ -1,4 +1,5 @@
 class Product4sController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy, :index], raise: false
   before_action :set_product4, only: [:show, :edit, :update, :destroy]
 
   # GET /product4s
